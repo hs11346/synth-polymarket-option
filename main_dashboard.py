@@ -39,6 +39,7 @@ def get_prices():
     lower_option = requests.get(binance_url, params={
         'symbol': f'{btc_symbol}-{option_date}-{lower_strike}-C'
     }).json()
+    print(lower_option)
     higher_option = requests.get(binance_url, params={
         'symbol': f'{btc_symbol}-{option_date}-{higher_strike}-C'
     }).json()
